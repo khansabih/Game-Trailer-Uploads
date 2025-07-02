@@ -43,18 +43,18 @@ def download_game_trailer(game_name: str) -> str:
     # Now start the download and return the path where trailer is stored (temporarily)
     try:
         with yt_dlp.YoutubeDL(ydl_options) as ydl:
-            # print(f"🔍 Downloading trailer: ytsearch1:{game_name} official trailer")
+            print(f"🔍 Downloading trailer: ytsearch1:{game_name} official trailer")
             ydl.download([f"ytsearch1:{game_name} official trailer"])
         
         if os.path.exists(output_path):
-            # print(f"✅ Trailer successfully downloaded to {output_path}")
+            print(f"✅ Trailer successfully downloaded to {output_path}")
             return output_path
         else:
-            # print("❌ Download process ended, but file not found.")
+            print("❌ Download process ended, but file not found.")
             return None
     except Exception as e:
-        # # print(f'Download failed for game {game_name}: {e}')
-        # print(f"❌ yt-dlp failed: {e}")
+        print(f'Download failed for game {game_name}: {e}')
+        print(f"❌ yt-dlp failed: {e}")
         return None
 
 # Utility function to upload the game trailer
