@@ -13,7 +13,7 @@ app = FastAPI()
 # Cloudflare configs
 R2_CONFIGS = {
     'access_key':os.environ['R2_ACCESS_KEY'],
-    'secret_key':os.environ['R2_SECREY_KEY'],
+    'secret_key':os.environ['R2_SECRET_KEY'],
     'endpoint': os.environ['R2_ENDPOINT'],
     'bucket': os.environ['R2_BUCKET']
 }
