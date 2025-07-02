@@ -37,7 +37,8 @@ def download_game_trailer(game_name: str) -> str:
         'noplaylist': True,
         'quiet': True,
         'default_search': 'ytsearch1',
-        'merge_output_format': 'mp4'
+        'merge_output_format': 'mp4',
+        'cookiefile':'youtube-cookies.txt'
     }
 
     # Now start the download and return the path where trailer is stored (temporarily)
