@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: trailer-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: R2_ACCESS_KEY
+        value: '585529c0ac82ee992f2e3973481345ab'
+      - key: R2_SECRET_KEY
+        value: '2e88fccabb3415154f21815bbe1ce880ea6c4ab10b97a9b847a7bb2b4477bd55'
+      - key: R2_ENDPOINT
+        value: 'https://675fd5a2ec41b5d9284b918835f18ebf.r2.cloudflarestorage.com'
+      - key: R2_BUCKET
+        value: 'game-trailers'
+      # - key: R2_PUBLIC_PREFIX
+      #   value: https://your-id.r2.dev
